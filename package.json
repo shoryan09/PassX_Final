@@ -1,0 +1,25 @@
+{
+  "name": "passx",
+  "version": "1.0.0",
+  "description": "Production-quality password manager with zero-knowledge encryption",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "setup": "npm install && cd shared && npm install && npm run build && cd ../backend && npm install && npx prisma generate && cd ../frontend && npm install",
+    "dev": "npm run build:shared && concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:shared && npm run build:backend && npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build:shared": "cd shared && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+

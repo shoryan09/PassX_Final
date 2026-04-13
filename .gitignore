@@ -1,0 +1,104 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+dist/
+build/
+.next/
+out/
+
+# Environment variables
+.env
+.env.*
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+*.env
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+*.sql
+*.dump
+*.backup
+mongodb-data/
+db-backup/
+
+# Prisma
+prisma/migrations/
+
+# Firebase & Service Account Keys
+firebase-service-account.json
+*-service-account.json
+service-account-key.json
+firebase-adminsdk-*.json
+
+# Secrets & Credentials
+secrets/
+credentials/
+*.secret
+*.credentials
+config/secrets.json
+config/credentials.json
+
+# Certificate & Key files
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cert
+*.cer
+*.jks
+*.keystore
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.tmp
+temp/
+tmp/
+
+# Data files
+data/
+*.data
+*.csv
+*.xlsx
+*.xls
+
+# Documentation (exclude README files)
+*.md
+!README.md
+!readme.md
+!Readme.md
+!SECURITY_ALERT.md
+

@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String      @id @default(auto()) @map("_id") @db.ObjectId
+  email         String      @unique
+  username      String?
+  passwordHash  String
+  profilePicture String?    // Base64 encoded image
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  vault         VaultItem[]
+
+  @@map("users")
+}
+
+model VaultItem {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId       String   @db.ObjectId
+  user         User     @relation(fields: [userId], references: [id])
+  type         String   // 'website', 'card', 'note'
+  name         String
+  encryptedData String  // Base64 encrypted JSON
+  iv           String   // Initialization vector (Base64)
+  salt         String?  // Salt for this item (if different from user's)
+  tags         String[] @default([])
+  category     String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  lastAccessed DateTime?
+
+  @@index([userId])
+  @@index([userId, type])
+  @@map("vault_items")
+}
+
