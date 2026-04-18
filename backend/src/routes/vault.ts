@@ -52,10 +52,10 @@ router.get('/items', async (req: AuthRequest, res, next) => {
     if (search) {
       const searchLower = (search as string).toLowerCase();
       filteredItems = items.filter(
-        (item) =>
+        (item: any) =>
           item.name.toLowerCase().includes(searchLower) ||
           item.category?.toLowerCase().includes(searchLower) ||
-          item.tags.some((tag) => tag.toLowerCase().includes(searchLower))
+          item.tags.some((tag: string) => tag.toLowerCase().includes(searchLower))
       );
     }
 
