@@ -2,6 +2,8 @@
 
 A production-quality password manager built with zero-knowledge architecture. All encryption and decryption happens client-side, ensuring your master password never leaves your device.
 
+# Deployed Project: https://pass-x-final-xi.vercel.app/dashboard
+
 ## Features
 
 ### 🔐 Security
