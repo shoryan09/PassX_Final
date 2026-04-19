@@ -1,36 +1,29 @@
 'use client';
 
-import { Mail, Github, Linkedin, ExternalLink, Code } from 'lucide-react';
+import { Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     {
-      name: 'LeetCode',
-      icon: Code,
-      href: 'https://leetcode.com/u/ishanrawat2000/',
-      color: 'hover:bg-orange-500 hover:text-white dark:hover:bg-orange-600',
-      bgColor: 'bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400',
-    },
-    {
       name: 'Gmail',
       icon: Mail,
-      href: 'mailto:ishanrawat2000@gmail.com',
+      href: 'mailto:royshoryan01209@gmail.com',
       color: 'hover:bg-red-500 hover:text-white dark:hover:bg-red-600',
       bgColor: 'bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400',
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://www.linkedin.com/in/ishaan-rawat-a88946267/',
+      href: 'https://www.linkedin.com/in/shoryanroy/',
       color: 'hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700',
       bgColor: 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400',
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/Ishaan04Rawat',
+      href: 'https://github.com/shoryan09',
       color: 'hover:bg-gray-800 hover:text-white dark:hover:bg-gray-700',
       bgColor: 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300',
     },
@@ -52,7 +45,7 @@ export default function Footer() {
               <p className="text-sm font-semibold text-gray-900 dark:text-white">
                 Created by{' '}
                 <span className="text-primary-600 dark:text-primary-400 font-science-gothic">
-                  Ishaan Rawat
+                  Shoryan Roy
                 </span>
               </p>
             </div>
@@ -108,7 +101,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
               <span>Made with</span>
               <span className="text-red-500 animate-pulse">♥</span>
-              <span>by Ishaan Rawat</span>
+              <span>by Shoryan Roy</span>
             </div>
           </div>
         </div>
